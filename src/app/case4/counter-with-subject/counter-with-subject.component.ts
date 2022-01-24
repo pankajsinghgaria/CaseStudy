@@ -1,5 +1,7 @@
+import { state } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { map, takeWhile, tap, timer } from 'rxjs';
+import { interval, NEVER, scan, startWith, Subject, switchMap, tap } from 'rxjs';
+import { CounterService } from '../counter.service';
 
 @Component({
   selector: 'app-counter-with-subject',
@@ -12,12 +14,5 @@ export class CounterWithSubjectComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  start = 10;
-  countDown = timer(0, 1000).pipe(
-    map(i => this.start - i),
-    takeWhile(i => i >= 0),
-    tap(s => console.log(s))
-  ).subscribe();
 
 }

@@ -1,1 +1,5 @@
-<p>counter-input works!</p>
+<div style="margin: auto; width: 200px; margin-top: 40px;">
+    <h3>Enter Timer Limit: </h3><input style="height: 20px; margin-bottom: 5px;" [(ngModel)]='limit' [disabled]="disableInput">
+    <button class="btn" (click)="startpause()">Start/Pause</button>
+    <button class="btn" (click)="reset()">Reset</button>
+</div>

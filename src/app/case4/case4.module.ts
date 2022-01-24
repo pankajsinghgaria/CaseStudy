@@ -6,6 +6,7 @@ import { MainCounterComponent } from './counter-with-subject/main-counter/main-c
 import { CountLogComponent } from './counter-with-subject/count-log/count-log.component';
 import { CounterInputComponent } from './counter-with-subject/counter-input/counter-input.component';
 import { TimerLogComponent } from './counter-with-subject/timer-log/timer-log.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ],
   exports: [
     // CounterWithSubjectComponent

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../../counter.service';
 
 @Component({
   selector: 'app-timer-log',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerLogComponent implements OnInit {
 
-  constructor() { }
+  constructor(private counterService : CounterService) { }
+
+  logs = []
 
   ngOnInit(): void {
+    this.counterService.logging.subscribe((data:any)=>{
+      this.logs = data.timeLog;
+    })
   }
 
 }

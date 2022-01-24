@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CounterService } from '../../counter.service';
 
 @Component({
   selector: 'app-count-log',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountLogComponent implements OnInit {
 
-  constructor() { }
+  constructor(private counterService : CounterService) { }
+
+  startCount = 0;
+  pauseCount = 0;
 
   ngOnInit(): void {
+    this.counterService.logging.subscribe((data:any)=>{
+      this.startCount = data.startCount;
+      this.pauseCount = data.pauseCount;
+    })
   }
 
 }
