@@ -1,0 +1,15 @@
+.mainDiv {
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+    margin: 10px auto;
+}
+
+.btnStyle {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    width: 70px;
+    background-color: #666;
+}

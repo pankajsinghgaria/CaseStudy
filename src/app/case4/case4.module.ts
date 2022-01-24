@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CounterWithSubjectComponent } from './counter-with-subject/counter-with-subject.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MainCounterComponent } from './counter-with-subject/main-counter/main-counter.component';
+import { CountLogComponent } from './counter-with-subject/count-log/count-log.component';
+import { CounterInputComponent } from './counter-with-subject/counter-input/counter-input.component';
+import { TimerLogComponent } from './counter-with-subject/timer-log/timer-log.component';
 
 const routes: Routes = [
   {
@@ -12,7 +16,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    CounterWithSubjectComponent
+    CounterWithSubjectComponent,
+    MainCounterComponent,
+    CountLogComponent,
+    CounterInputComponent,
+    TimerLogComponent
   ],
   imports: [
     CommonModule,

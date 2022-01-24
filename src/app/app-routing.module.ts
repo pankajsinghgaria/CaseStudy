@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/case1', pathMatch: 'full' },
   { path: 'case1', loadChildren: () => import('./case1/case1.module').then(m => m.Case1Module) },
   { path: 'case2', loadChildren: () => import('./case2/case2.module').then(m => m.Case2Module) },
   { path: 'case3', loadChildren: () => import('./case3/case3.module').then(m => m.Case3Module) },
@@ -15,7 +17,8 @@ const routes: Routes = [
   declarations: [],
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   exports: [RouterModule]
 })

@@ -1,1 +1,19 @@
-<p>mark-sheet works!</p>
+<br>
+<table id="customers">
+    <tr>
+        <th (click)="sortTable('name')">Name</th>
+        <th (click)="sortTable('class')">Class</th>
+        <th (click)="sortTable('section')">Section</th>
+        <th (click)="sortTable('sub1')">Sub1</th>
+        <th (click)="sortTable('sub2')">Sub2</th>
+        <th (click)="sortTable('sub3')">Sub3</th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.name}}</td>
+        <td>{{student.class}}</td>
+        <td>{{student.section}}</td>
+        <td>{{student.sub1}}</td>
+        <td>{{student.sub2}}</td>
+        <td>{{student.sub3}}</td>
+    </tr>
+</table>

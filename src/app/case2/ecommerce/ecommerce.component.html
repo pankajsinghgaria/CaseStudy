@@ -1,1 +1,17 @@
-<p>ecommerce works!</p>
+<br>
+<div>
+    <button class="btn" [ngClass]="listActive" (click)="listView()"><i class="fa fa-bars"></i> List</button>
+    <button class="btn" [ngClass]="gridActive" (click)="gridView()"><i class="fa fa-th-large"></i> Grid</button>
+    <select class="btn" #priceSort (change)="sort(priceSort.value)">
+        <option value="l2h">Low To High</option>
+        <option value="h2l">High To Low</option>
+    </select>
+</div>
+<br>
+
+<div>
+    <div *ngFor='let item of itemList' [ngClass]="viewClass" class="column" style="background-color:#ccc;">
+        <h2>{{item.name}}</h2>
+        <p>{{item.price}}</p>
+    </div>
+</div>

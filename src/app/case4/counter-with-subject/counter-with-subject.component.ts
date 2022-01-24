@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map, takeWhile, tap, timer } from 'rxjs';
 
 @Component({
   selector: 'app-counter-with-subject',
@@ -11,5 +12,12 @@ export class CounterWithSubjectComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  start = 10;
+  countDown = timer(0, 1000).pipe(
+    map(i => this.start - i),
+    takeWhile(i => i >= 0),
+    tap(s => console.log(s))
+  ).subscribe();
 
 }

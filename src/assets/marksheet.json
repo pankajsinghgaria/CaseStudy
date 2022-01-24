@@ -1,0 +1,48 @@
+{
+    "students": [{
+            "id": 1,
+            "name": "Sandeep",
+            "class": "3",
+            "section": "D",
+            "sub1": 23,
+            "sub2": 56,
+            "sub3": 20
+        },
+        {
+            "id": 2,
+            "name": "Pawan",
+            "class": "4",
+            "section": "A",
+            "sub1": 33,
+            "sub2": 45,
+            "sub3": 92
+        },
+        {
+            "id": 3,
+            "name": "Ram",
+            "class": "6",
+            "section": "C",
+            "sub1": 44,
+            "sub2": 67,
+            "sub3": 29
+        },
+        {
+            "id": 4,
+            "name": "Akram",
+            "class": "5",
+            "section": "A",
+            "sub1": 78,
+            "sub2": 65,
+            "sub3": 24
+        }, {
+            "id": 5,
+            "name": "Rashi",
+            "class": "2",
+            "section": "C",
+            "sub1": 56,
+            "sub2": 40,
+            "sub3": 47
+        }
+
+    ]
+}

@@ -1,0 +1,7 @@
+.divStyle {
+    width: 600px;
+    height: 200px;
+    float: left;
+    border: 1px solid black;
+    overflow-x: auto;
+}

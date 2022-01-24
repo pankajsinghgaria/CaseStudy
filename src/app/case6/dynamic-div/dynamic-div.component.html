@@ -1,1 +1,6 @@
-<p>dynamic-div works!</p>
+<br>
+<div class="mainDiv" *ngFor="let div of divArr">
+    <h1 style="text-align: center;">{{div}}</h1>
+    <div style="width: 70px; margin: auto;"><button class="btnStyle" (click)="alertDisp(div)">Click!!!</button></div>
+
+</div>

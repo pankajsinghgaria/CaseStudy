@@ -1,1 +1,12 @@
-<p>counter-with-decoraters works!</p>
+<div class="divStyle">
+    <app-main-counter></app-main-counter>
+</div>
+<div class="divStyle">
+    <app-counter-input (startPauseEvent)="startPause($event)"></app-counter-input>
+</div>
+<div class="divStyle">
+    <app-timer-log [logs]="clickTimeLog"></app-timer-log>
+</div>
+<div class="divStyle">
+    <app-count-log [startCount]="startCount" [pauseCount]="pauseCount"></app-count-log>
+</div>
